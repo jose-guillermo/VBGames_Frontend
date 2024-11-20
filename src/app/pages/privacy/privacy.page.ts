@@ -1,0 +1,21 @@
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+
+@Component({
+  selector: 'app-privacy',
+  templateUrl: './privacy.page.html',
+  styleUrls: ['./privacy.page.scss'],
+  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+})
+export default class PrivacyPage implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
