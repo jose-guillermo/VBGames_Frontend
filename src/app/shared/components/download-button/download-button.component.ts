@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@angular/core';
 import { IonButton, IonIcon } from "@ionic/angular/standalone";
 import { addIcons } from 'ionicons';
 import { download } from 'ionicons/icons';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'shared-component-download-button',
@@ -17,6 +18,7 @@ export class DownloadButtonComponent  implements OnInit {
   public showInstallButton = signal<boolean>(false);
 
   private deferredPrompt = signal<any>(null);
+  private platform = inject(Platform);
 
   constructor(){
     addIcons({ download });
@@ -27,13 +29,19 @@ export class DownloadButtonComponent  implements OnInit {
       // Prevenir que el navegador muestre el banner de instalación predeterminado
       event.preventDefault();
       this.deferredPrompt.set(event);
-      if (this.isMobile())
+      if (this.isMobile()){
         this.showInstallButton.set(true);
+
+
+      }
     });
   }
 
   private isMobile(): boolean {
-    return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if(this.platform.is("mobile") || this.platform.is("tablet"))
+      return true;
+
+    return false;
   }
 
   public installApp() {

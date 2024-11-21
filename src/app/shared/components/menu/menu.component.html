@@ -1,7 +1,12 @@
 <ion-buttons slot="end">
   <ion-button (click)="changeTheme()">
-    <ion-icon slot="icon-only" [name]="themeIcon()" size="large" />
+    <ion-icon slot="icon-only" [name]="themeIcon()"/>
   </ion-button>
+
+  <ion-select [value]="selectedLang()"  (ionChange)="changeLanguage($event)" interface="popover">
+    <ion-select-option value="es">es</ion-select-option>
+    <ion-select-option value="en">en</ion-select-option>
+  </ion-select>
 
   <shared-component-download-button />
 </ion-buttons>

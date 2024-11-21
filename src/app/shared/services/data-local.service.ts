@@ -9,7 +9,7 @@ export class DataLocalService {
   private _storage: Storage | null = null;
 
   private storage: Storage = inject(Storage);
-  private toastCtrl: ToastController = inject(ToastController);
+  // private toastCtrl: ToastController = inject(ToastController);
 
   constructor() {
     this.init();
@@ -24,7 +24,8 @@ export class DataLocalService {
    * @param theme El tema que se va a actualizar
    */
   public async updateTheme(theme: string): Promise<void> {
-    if (this._storage) await this._storage.set('theme', theme);
+    if (this._storage)
+      await this._storage.set('theme', theme);
   }
 
   /**
@@ -48,7 +49,8 @@ export class DataLocalService {
    * @param lang El idioma que se va a actualizar
    */
   public async updateLang(lang: string): Promise<void> {
-    if (this._storage) await this._storage.set('theme', lang);
+    if (this._storage)
+      await this._storage.set('lang', lang);
   }
 
   /**
