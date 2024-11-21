@@ -1,13 +1,7 @@
-<ion-header [translucent]="true" mode="md">
-  <ion-toolbar color="secondary">
-    <ion-img class="logo" src="assets/{{ logo() }}"></ion-img>
-    <ion-buttons slot="end">
-      <ion-button (click)="changeTheme()">
-        <ion-icon slot="icon-only" [name]="themeIcon()" size="large"/>
-      </ion-button>
+<ion-buttons slot="end">
+  <ion-button (click)="changeTheme()">
+    <ion-icon slot="icon-only" [name]="themeIcon()" size="large" />
+  </ion-button>
 
-      <component-download-button />
-
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+  <component-download-button />
+</ion-buttons>

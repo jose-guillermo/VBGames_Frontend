@@ -12,14 +12,12 @@ import { IonicStorageModule } from '@ionic/storage-angular';
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
 
-  imports: [IonImg, IonIcon,  IonButton, IonButtons, IonHeader, IonToolbar, DownloadButtonComponent, IonicStorageModule ],
+  imports: [ IonIcon,  IonButton, IonButtons, DownloadButtonComponent, IonicStorageModule ],
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent {
 
   public themeIcon = computed(() => this.themeService.currentTheme() === "theme-dark" ? "moon" : "sunny")
-
-  public logo = computed(() => this.themeService.currentTheme() === "theme-dark" ? "logo-oscuro.png" : "logo-claro.png")
 
   private themeService = inject(ThemeService);
 
