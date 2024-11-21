@@ -1,0 +1,31 @@
+{
+    "PRIVACY": "Privacidad",
+    "PRIVACY_POLICY": {
+      "TITLE": "Política de Privacidad",
+      "INTRO": "¡Bienvenido a Virtual Board Game! Tu privacidad es importante para nosotros. Esta política explica cómo recopilamos, usamos y protegemos tu información.",
+      "DATA_COLLECTION": {
+        "TITLE": "Qué Información Recopilamos",
+        "CONTENT": "Recopilamos los siguientes datos cuando utilizas nuestros servicios: tu correo electrónico, nombre de usuario, historial de partidas y compras dentro de la aplicación. No almacenamos información de pagos directamente; esto lo gestiona nuestro proveedor de pagos seguro."
+      },
+      "DATA_USAGE": {
+        "TITLE": "Cómo Usamos Tus Datos",
+        "CONTENT": "Tus datos se utilizan para proporcionar y mejorar nuestros servicios, personalizar tu experiencia y brindar soporte técnico. También podemos usar datos anonimizados para análisis y mejoras del juego."
+      },
+      "DATA_SHARING": {
+        "TITLE": "Con Quién Compartimos Tus Datos",
+        "CONTENT": "No vendemos tus datos. Solo compartimos información con socios de confianza que nos ayudan a operar la plataforma, como proveedores de alojamiento o procesadores de pagos, bajo estrictos acuerdos de confidencialidad."
+      },
+      "USER_RIGHTS": {
+        "TITLE": "Tus Derechos",
+        "CONTENT": "Puedes acceder, actualizar o eliminar la información de tu cuenta en cualquier momento. Si tienes inquietudes sobre tus datos, contáctanos en support@virtualboardgame.com."
+      },
+      "CHANGES": {
+        "TITLE": "Actualizaciones de la Política",
+        "CONTENT": "Podemos actualizar esta política ocasionalmente. Los cambios se publicarán en esta página, y el uso continuado de nuestros servicios implica que aceptas los términos actualizados."
+      },
+      "CONTACT": {
+        "TITLE": "Contáctanos",
+        "CONTENT": "Si tienes alguna pregunta sobre nuestra Política de Privacidad, envíanos un correo a support@virtualboardgame.com."
+      }
+    }
+  }

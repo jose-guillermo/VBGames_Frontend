@@ -7,7 +7,7 @@ import { ThemeService } from '../../services/theme.service';
 import { IonicStorageModule } from '@ionic/storage-angular';
 
 @Component({
-  selector: 'component-menu',
+  selector: 'shared-component-menu',
   templateUrl: './menu.component.html',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,

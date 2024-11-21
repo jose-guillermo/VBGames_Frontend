@@ -1,0 +1,31 @@
+{
+    "PRIVACY": "Privacy",
+    "PRIVACY_POLICY": {
+      "TITLE": "Privacy Policy",
+      "INTRO": "Welcome to Virtual Board Game! Your privacy is important to us. This policy explains how we collect, use, and protect your information.",
+      "DATA_COLLECTION": {
+        "TITLE": "What Information We Collect",
+        "CONTENT": "We collect the following data when you use our services: your email address, username, game history, and in-app purchases. We do not store payment information directly; this is handled by our secure payment provider."
+      },
+      "DATA_USAGE": {
+        "TITLE": "How We Use Your Data",
+        "CONTENT": "Your data is used to provide and improve our services, personalize your experience, and for technical support. We may also use anonymized data for analytics to improve gameplay."
+      },
+      "DATA_SHARING": {
+        "TITLE": "Who We Share Your Data With",
+        "CONTENT": "We do not sell your data. We only share information with trusted partners who help us operate the platform, such as hosting providers or payment processors, under strict confidentiality agreements."
+      },
+      "USER_RIGHTS": {
+        "TITLE": "Your Rights",
+        "CONTENT": "You can access, update, or delete your account information at any time. If you have concerns about your data, please contact us at support@virtualboardgame.com."
+      },
+      "CHANGES": {
+        "TITLE": "Policy Updates",
+        "CONTENT": "We may update this policy occasionally. Changes will be posted on this page, and your continued use of our services means you agree to the updated terms."
+      },
+      "CONTACT": {
+        "TITLE": "Contact Us",
+        "CONTENT": "If you have any questions about our Privacy Policy, please email us at support@virtualboardgame.com."
+      }
+    }
+  }

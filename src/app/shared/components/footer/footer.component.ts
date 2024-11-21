@@ -3,7 +3,7 @@ import { IonFooter, IonToolbar, IonLabel, IonButton } from "@ionic/angular/stand
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'component-footer',
+  selector: 'shared-component-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

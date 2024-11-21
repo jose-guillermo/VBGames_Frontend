@@ -4,7 +4,7 @@ import { addIcons } from 'ionicons';
 import { download } from 'ionicons/icons';
 
 @Component({
-  selector: 'component-download-button',
+  selector: 'shared-component-download-button',
   templateUrl: './download-button.component.html',
   styleUrls: ['./download-button.component.scss'],
   standalone: true,
