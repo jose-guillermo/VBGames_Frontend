@@ -3,7 +3,7 @@
 }
 
 ion-select{
-  color: var(--ion-color-primary);
+  color: var(--ion-color-secondary) !important;
 }
 .popover-viewport{
   width: 50px;
@@ -14,7 +14,11 @@ ion-list{
 
 }
 
-ion-select ion-select-option{
-  background-color: var(--ion-color-primary);
-  width: 50px;
+#select-label{
+  color: var(--ion-color-secondary) !important;
+
+}
+
+#ion-sel-0{
+  color: red;
 }

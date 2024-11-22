@@ -1,6 +1,6 @@
 <ion-header [translucent]="true" mode="md">
   <ion-toolbar color="secondary">
-    <ion-img class="logo" src="assets/{{ logo() }}"></ion-img>
+    <ion-img [routerLink]="['./']" routerLinkActive="router-link-active" class="logo clickable" src="assets/{{ logo() }}"></ion-img>
 
     <shared-component-menu slot="end"/>
   </ion-toolbar>

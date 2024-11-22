@@ -1,6 +1,6 @@
 <ion-buttons slot="end">
   <ion-button (click)="changeTheme()">
-    <ion-icon slot="icon-only" [name]="themeIcon()"/>
+    <ion-icon size="large" slot="icon-only" [name]="themeIcon()"/>
   </ion-button>
 
   <ion-select [value]="selectedLang()"  (ionChange)="changeLanguage($event)" interface="popover">

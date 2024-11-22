@@ -2,12 +2,13 @@ import { ChangeDetectionStrategy, Component, computed, inject, OnInit } from '@a
 import { IonIcon, IonHeader, IonToolbar, IonImg } from "@ionic/angular/standalone";
 import { ThemeService } from '../../services/theme.service';
 import { MenuComponent } from "../menu/menu.component";
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'shared-component-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  imports: [ IonHeader, IonToolbar, IonImg, MenuComponent],
+  imports: [ IonHeader, IonToolbar, IonImg, MenuComponent, RouterModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
 })
