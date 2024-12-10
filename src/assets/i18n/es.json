@@ -1,0 +1,138 @@
+{
+  "VERSION": "Versión",
+  "PRIVACY": "Privacidad",
+  "PRIVACY_POLICY": {
+    "TITLE": "Política de Privacidad",
+    "INTRO": "¡Bienvenido a Virtual Board Game! Nos tomamos muy en serio la protección de tu privacidad. Esta política tiene como objetivo explicarte de manera clara y transparente qué información recopilamos, cómo la utilizamos y cómo la protegemos para garantizar tu confianza al usar nuestra plataforma.",
+    "DATA_COLLECTION": {
+      "TITLE": "Qué Información Recopilamos",
+      "CONTENT": "Recopilamos datos esenciales para que disfrutes de nuestros servicios, como tu correo electrónico, nombre de usuario, historial de partidas y las compras realizadas dentro de la aplicación. Además, podemos recopilar datos adicionales sobre tu interacción con la plataforma, como estadísticas de juego, preferencias y configuración de usuario. Es importante señalar que no almacenamos información relacionada con tus métodos de pago directamente. Todos los pagos son gestionados por proveedores de pago seguros que cuentan con altos estándares de seguridad."
+    },
+    "DATA_USAGE": {
+      "TITLE": "Cómo Usamos Tus Datos",
+      "CONTENT": "La información que recopilamos se utiliza para garantizar que nuestra plataforma funcione de manera eficiente y para ofrecerte una experiencia personalizada. Esto incluye adaptar los juegos a tus preferencias, ofrecerte soporte técnico rápido y efectivo, y mantener un entorno seguro para todos los usuarios. También podemos analizar datos de uso (de forma anonimizada) para mejorar las características del juego, identificar problemas técnicos y desarrollar nuevas funcionalidades que enriquezcan la experiencia de juego."
+    },
+    "DATA_SHARING": {
+      "TITLE": "Con Quién Compartimos Tus Datos",
+      "CONTENT": "No compartimos ni vendemos tus datos personales a terceros para fines comerciales. Solo compartimos información estrictamente necesaria con socios confiables que nos ayudan a operar la plataforma, como proveedores de servicios de alojamiento de datos, herramientas de análisis y procesadores de pagos. Estos socios están obligados por acuerdos de confidencialidad que garantizan el uso seguro y responsable de tu información."
+    },
+    "USER_RIGHTS": {
+      "TITLE": "Tus Derechos",
+      "CONTENT": "Como usuario, tienes derecho a acceder, actualizar o eliminar la información de tu cuenta en cualquier momento. Puedes hacerlo directamente desde la configuración de tu perfil en la aplicación o poniéndote en contacto con nuestro equipo de soporte. Además, tienes derecho a solicitar detalles sobre cómo utilizamos tus datos y a oponerte al uso de los mismos para ciertos fines, como el análisis de datos. Estamos aquí para ayudarte a ejercer estos derechos de manera sencilla y sin complicaciones."
+    },
+    "CHANGES": {
+      "TITLE": "Actualizaciones de la Política",
+      "CONTENT": "Nuestra Política de Privacidad puede ser actualizada ocasionalmente para reflejar cambios en nuestros servicios, normativas legales o requisitos de seguridad. Te notificaremos sobre cualquier cambio significativo publicando un aviso en nuestra plataforma o enviándote un mensaje. Recomendamos revisar esta política periódicamente para mantenerte informado."
+    },
+    "CONTACT": {
+      "TITLE": "Contáctanos",
+      "CONTENT": "Si tienes dudas, comentarios o inquietudes relacionadas con nuestra Política de Privacidad, nuestro equipo está disponible para ayudarte. Envianos un mensaje a través del botón 'Enviar comentarios' en el menú y nos aseguraremos de responder lo antes posible."
+    },
+    "COOKIES": {
+      "TITLE": "Uso de Cookies",
+      "CONTENT": "Usamos cookies para ofrecerte una experiencia de usuario fluida y personalizada. Las cookies nos permiten recordar tus preferencias, como el idioma y el tema visual de la plataforma, y recopilar información sobre cómo interactúas con nuestra aplicación. Estos datos nos ayudan a identificar áreas de mejora y garantizar que todos los usuarios disfruten de un servicio optimizado."
+    }
+  },
+  "DOWNLOAD": "Descargar",
+  "INSTALL_DISMISS_TOAST": "Si quieres descargarlo luego, ve a configuración",
+  "MENU": {
+    "LOGOUT": "Cerrar sesión",
+    "REPLAYS": "Ver repeticiones",
+    "PROFILE": "Perfil",
+    "FRIENDS_LIST": "Lista de amigos",
+    "CUSTOMIZE_GAMES": "Personalizar juegos",
+    "MESSAGES": "Mensajes",
+    "CLOSE": "Cerrar menu",
+    "ADD_GAME": "Añadir juego",
+    "ADD_PRODUCT": "Añadir producto",
+    "ADD_ACHIEVEMENT": "Añadir logro"
+  },
+  "LOGIN": {
+    "TITLE": "Iniciar sesión",
+    "EMAIL": "Correo electrónico",
+    "PASSWORD": "Contraseña",
+    "VALID_EMAIL": "Introduce un email válido",
+    "VALID_PASSWORD": "Introduce una contraseña válida",
+    "FORGOT_PASSWORD": "¿Olvidaste tu contraseña?",
+    "LOGIN_BUTTON": "Iniciar sesión",
+    "SIGNUP": "¿No tienes una cuenta?",
+    "ERROR": {
+      "INVALID_PASSWORD": "La contraseña debe tener al menos 6 caracteres.",
+      "INVALID_EMAIL": "Introduce un correo electrónico válido.",
+      "INVALID_CREDENTIALS": "Credenciales inválidas. Intenta de nuevo.",
+      "EMPTY_FIELD": "Este campo es obligatorio."
+    }
+  },
+  "REGISTER": {
+    "TITLE": "Registro",
+    "BUTTON": "Registrarse",
+    "EMAIL": "Correo electrónico",
+    "USERNAME": "Nombre de usuario",
+    "PASSWORD": "Contraseña",
+    "CONFIRM_PASSWORD": "Confirmar contraseña",
+    "ADD_PROFILE_IMG": "Añadir imagen de perfil (opcional)",
+    "PROFILE_IMG_ALT": "Imagen que se va a subir",
+    "HELPER_TEXT": {
+      "PASSWORD": "Tu contraseña debe contener al menos una letra mayúscula, una letra minúscula y un número.",
+      "EMAIL": "Por favor, ingresa una dirección de correo electrónico válida",
+      "USERNAME": "Elige un nombre de usuario único. Debe tener al menos 6 caracteres.",
+      "CONFIRM_PASSWORD": "Por favor, vuelve a ingresar tu contraseña para confirmarla."
+    },
+    "ERRORS": {
+      "REQUIRED": "Este campo es obligatorio.",
+      "INVALID_EMAIL": "Por favor, introduce un correo electrónico válido.",
+      "USERNAME_MIN_LENGTH": "El nombre de usuario debe tener al menos 6 caracteres.",
+      "PASSWORD_MIN_LENGTH": "La contraseña debe tener al menos 6 caracteres.",
+      "INVALID_PASSWORD": "La contraseña debe contener al menos una letra mayúscula y un número.",
+      "PASSWORD_MISMATCH": "Las contraseñas no coinciden."
+    },
+    "TOAST": "¡Éxito! El usuario ha sido creado"
+  },
+
+  "FEEDBACK": "Enviar comentarios",
+  "FEEDBACK_PAGE": {
+    "TITLE": "Ayúdanos a mejorar",
+    "SUBTITLE": "Comparte tus ideas, sugerencias o problemas con nosotros",
+    "SUBJECT": "Asunto",
+    "PLACEHOLDER_SUBJECT": "Escribe el título de tu mensaje",
+    "BODY": "Cuerpo del mensaje",
+    "PLACEHOLDER_BODY": "Describe tu mensaje con al menos 20 caracteres",
+    "RADIO_BUG": "Reporte de error",
+    "RADIO_SUGGESTION": "Propuesta de mejora",
+    "TOAST": "Gracias por tu comentario. Tu opinión es muy importante para nosotros y nos ayuda a mejorar cada día."
+  },
+
+  "WELCOMING_MESSAGE": {
+    "TITLE": "¡Bienvenido a Virtual Board Games!, ",
+    "BODY": "Gracias por registrarte. Estamos felices de que te unas a nosotros. Conéctate, reta a tus amigos y empieza a jugar. ¡Que empiece la diversión!"
+  },
+  "MESSAGES_PAGE": {
+    "TITLE": "Lista de Mensajes",
+    "SEND_BY": "Enviado por:",
+    "READ": "Leído",
+    "NO_READ": "No leído",
+    "CLOSE_MESSAGE": "Cerrar",
+    "NO_MESSAGES": "No tienes mensajes en estos momentos.",
+    "MESSAGE": {
+      "NEXT_MESSAGE": "Siguiente",
+      "PREVIOUS_MESSAGE": "Anterior",
+      "MESSAGE_DETAILS": "Detalles del mensaje",
+      "FROM": "De",
+      "TO": "Para",
+      "DATE": "Fecha",
+      "TYPE": "Tipo",
+      "BODY": "Cuerpo",
+      "TYPES": {
+        "BUG": "Error",
+        "SUGGESTION": "Sugerencia",
+        "GAME_CHALLENGE": "Desafío de juego",
+        "FRIEND_REQUEST": "Solicitud de amistad",
+        "ACHIEVEMENT_UNLOCKED": "Logro desbloqueado",
+        "STORE_PROMOTION": "Promoción de tienda",
+        "WARNING": "Advertencia",
+        "SYSTEM_NOTIFICATION": "Notificación del sistema"
+      }
+    }
+  },
+  "NO_FAVOURITE_ACHIEVEMENT": "Ninguno"
+}

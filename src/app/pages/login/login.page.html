@@ -1,0 +1,49 @@
+<ion-card color="secondary" mode="md">
+  <ion-card-header>
+    <ion-card-title>{{ "LOGIN.TITLE" | translate }}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <form [formGroup]="loginForm()" (ngSubmit)="login()">
+      <ion-input
+        class="ion-margin-vertical"
+        (ionInput)="changeEmailError()"
+        fill="outline"
+        type="email"
+        formControlName="email"
+        labelPlacement="stacked"
+        helperText="{{ 'LOGIN.VALID_EMAIL' | translate}}"
+        label="{{ 'LOGIN.EMAIL' | translate }}"
+        placeholder="email@domain.com"
+        [errorText]="emailError()"
+      />
+      <ion-input
+        class="ion-margin-vertical"
+        (ionInput)="changePassError()"
+        fill="outline"
+        [type]="passVisibility() ? 'text' : 'password'"
+        formControlName="password"
+        labelPlacement="stacked"
+        helperText="{{ 'LOGIN.VALID_PASSWORD' | translate}}"
+        label="{{ 'LOGIN.PASSWORD' | translate }}"
+
+        [errorText]="passError()"
+      >
+        <ion-button (click)="tooglePassVisibility()" fill="clear" slot="end" aria-label="Show/hide">
+          <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
+        </ion-button>
+      </ion-input>
+
+      <ion-button expand="full" fill="solid" type="submit" [disabled]="loginForm().invalid">
+        {{ 'LOGIN.LOGIN_BUTTON' | translate }}
+      </ion-button>
+    </form>
+    <div class="ion-margin-top">
+      <a href="">{{ 'LOGIN.FORGOT_PASSWORD' | translate}}</a>
+      <p class="extra-text">
+        {{ "LOGIN.SIGNUP" | translate}}
+        <a routerLink="/signup" routerLinkActive="router-link-active">{{ "REGISTER.TITLE" | translate}}</a>
+      </p>
+    </div>
+  </ion-card-content>
+</ion-card>

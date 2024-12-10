@@ -1,0 +1,18 @@
+
+<ion-card class="user-card">
+  <ion-item lines="none" color="primary">
+    <ion-avatar slot="start">
+      @defer () {
+        <ion-img src="{{ 'user' | image:'sdfsdf123':'sdfaksdfj' }}"/>
+      } @placeholder {
+        <div>
+          <ion-img src="assets/preloader-dark.svg" />
+        </div>
+      }
+    </ion-avatar>
+    <ion-label>
+      <h2 class="username">{{ userName() }}</h2>
+      <p class="achievement">🏆 {{ achievement() }}</p>
+    </ion-label>
+  </ion-item>
+</ion-card>
