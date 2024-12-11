@@ -8,14 +8,14 @@ import { importProvidersFrom, isDevMode } from '@angular/core';
 import { provideServiceWorker } from '@angular/service-worker';
 import { IonicStorageModule } from '@ionic/storage-angular';
 
-import {provideHttpClient} from "@angular/common/http";
-import {provideTranslateService, TranslateLoader} from "@ngx-translate/core";
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-import {HttpClient} from '@angular/common/http';
+import { provideHttpClient } from "@angular/common/http";
+import { provideTranslateService, TranslateLoader } from "@ngx-translate/core";
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient } from '@angular/common/http';
+
 
 const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (http: HttpClient) =>
     new TranslateHttpLoader(http, './assets/i18n/', '.json');
-
 
 bootstrapApplication(AppComponent, {
   providers: [

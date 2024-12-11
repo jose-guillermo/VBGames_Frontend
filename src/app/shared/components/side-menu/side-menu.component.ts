@@ -43,6 +43,7 @@ export class SideMenuComponent {
 
   logout() {
     this.userService.logout();
+    
   }
 
 }

@@ -11,6 +11,7 @@ import { TranslatorService } from 'src/app/shared/services/translator.service';
 import { UserService } from 'src/app/shared/services/user.service';
 import { Response } from 'src/app/shared/Interfaces/response.interface';
 import { DataLocalService } from '../../shared/services/data-local.service';
+import { RealtimeDatabaseService } from 'src/app/shared/services/realtime-database.service';
 
 
 @Component({
@@ -34,6 +35,7 @@ export default class LoginPage {
   private dataLocal = inject(DataLocalService);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
+  private realtimeDb = inject(RealtimeDatabaseService);
 
   public loginForm = signal<FormGroup>(this.fb.group({
     email: ['', [Validators.required, Validators.pattern(emailPattern)]], // Validación de correo
@@ -69,6 +71,7 @@ export default class LoginPage {
           if( response.exito ){
             this.userService.getUser()
               .subscribe((res: Response) => {
+                this.realtimeDb.writeData(`users/${res.user?.userName}`, {coins: res.user?.coins, rol: res.user?.rol,});
                 this.dataLocal.setValue("user", res.user).then(() => {
                   this.userService.userInit();
                   this.router.navigate(["/home"])

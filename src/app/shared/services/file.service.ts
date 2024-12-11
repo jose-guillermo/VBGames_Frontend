@@ -33,7 +33,7 @@ export class FileService {
       console.log(`assets/i18n/en.json`);
 
       const file = await Filesystem.readFile({
-        path: `assets/i18n/en.json`,
+        path: `https://res.cloudinary.com/dkwordgbe/raw/upload/en_hbfizz.json`,
         directory: Directory.Data,  // Usamos el directorio 'Data' para almacenamiento persistente
         encoding: Encoding.UTF8
       });

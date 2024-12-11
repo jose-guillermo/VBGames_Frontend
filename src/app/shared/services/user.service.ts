@@ -18,16 +18,16 @@ export class UserService {
   private router = inject(Router);
   private dataLocal = inject(DataLocalService);
 
-  // public user = signal<User | null>( null );
-  public user = signal<User | null>( {
-    id: '12345',
-    userName: 'JohnDoe',
-    email: 'johndoe@example.com',
-    rol: 'user',
-    coins: 500,
-    creationDate: new Date(), // Fecha actual
-    favouriteGame: 'Chess',
-  });
+  public user = signal<User | null>( null );
+  // public user = signal<User | null>( {
+  //   id: '12345',
+  //   userName: 'JohnDoe',
+  //   email: 'johndoe@example.com',
+  //   rol: 'user',
+  //   coins: 500,
+  //   creationDate: new Date(), // Fecha actual
+  //   favouriteGame: 'Chess',
+  // });
 
   constructor() {
     this.userInit();
@@ -55,11 +55,11 @@ export class UserService {
     return this.http.post<Response>(url, formData, { withCredentials: true });
   }
 
-  logout() {
+  logout(): Observable<Response> {
     this.user.set(null);
-    this.dataLocal.deleteKey("jwt");
+    this.dataLocal.deleteKey("user");
     this.router.navigate(['home']);
-    // return this.http.post(`${URL}/session/destroySession.php`, {}, { withCredentials: true });
+    return this.http.post<Response>(`${URL}/session/destroySession.php`, {}, { withCredentials: true });
   }
 
   userInit() {
