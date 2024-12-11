@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
 import { ThemeService } from './shared/services/theme.service';
 import { TranslatorService } from './shared/services/translator.service';
-import { UserService } from './shared/services/user.service';
+import { UserService } from './shared/services/backend/user.service';
 import { FileService } from './shared/services/file.service';
 import { RealtimeDatabaseService } from './shared/services/realtime-database.service';
 

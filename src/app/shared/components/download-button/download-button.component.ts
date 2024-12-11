@@ -1,12 +1,13 @@
 import { ChangeDetectionStrategy, Component, inject, OnDestroy, OnInit, signal, ViewChild } from '@angular/core';
 import { IonButton, IonToast } from "@ionic/angular/standalone";
 import { addIcons } from 'ionicons';
-import { colorFill, download } from 'ionicons/icons';
-import { Platform, AlertController } from '@ionic/angular';
+import { download } from 'ionicons/icons';
+import { Platform } from '@ionic/angular';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { DataLocalService } from '../../services/data-local.service';
 import { filter, Subscription } from 'rxjs';
+
+import { DataLocalService } from '../../services/data-local.service';
 import { ToastService } from '../../services/toast.service';
 
 @Component({
@@ -15,7 +16,6 @@ import { ToastService } from '../../services/toast.service';
   styleUrls: ['./download-button.component.scss'],
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-
   imports: [IonToast,  IonButton, TranslatePipe ],
 })
 export class DownloadButtonComponent  implements OnInit, OnDestroy {
@@ -31,7 +31,6 @@ export class DownloadButtonComponent  implements OnInit, OnDestroy {
   private router = inject(Router);
   private dataLocal = inject(DataLocalService);
   private toastService = inject(ToastService);
-  private alertCtrl = inject(AlertController);
   private translate = inject(TranslateService);
 
   ngOnInit() {
@@ -86,16 +85,15 @@ export class DownloadButtonComponent  implements OnInit, OnDestroy {
 
         if (choiceResult.outcome === 'accepted') {
           this.showInstallButton.set(false);
-
         }
 
         if (choiceResult.outcome === 'dismissed') {
-
           this.showInstallButton.set(false);
           this.dataLocal.setValue( "download", "dismissed");
           this.subscription()!.unsubscribe();
           this.toastService.presentToast(this.translate.instant("INSTALL_DISMISS_TOAST"), "middle", "secondary");
         }
+
         this.deferredPrompt.set(null) // Reinicia el objeto deferredPrompt
       });
     }

@@ -1,10 +1,10 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonCard, IonImg, IonCardTitle, IonCardHeader, IonCardSubtitle, IonCardContent, IonRow, IonCol, IonIcon, IonItem, IonAvatar, IonLabel } from '@ionic/angular/standalone';
-import { UserService } from 'src/app/shared/services/user.service';
+import { IonButton } from '@ionic/angular/standalone';
 import { TranslatePipe } from '@ngx-translate/core';
-import { ImagePipe } from 'src/app/shared/pipes/image.pipe';
+
+import { UserService } from 'src/app/shared/services/backend/user.service';
 import { UserCardComponent } from "../../shared/components/user-card/user-card.component";
 
 @Component({
@@ -12,7 +12,8 @@ import { UserCardComponent } from "../../shared/components/user-card/user-card.c
   templateUrl: './profile.page.html',
   styleUrls: ['./profile.page.scss'],
   standalone: true,
-  imports: [IonButton, CommonModule, FormsModule, TranslatePipe, ImagePipe, UserCardComponent]
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [IonButton, CommonModule, FormsModule, TranslatePipe, UserCardComponent]
 })
 export default class ProfilePage implements OnInit {
 

@@ -1,8 +1,8 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import {TranslatePipe} from "@ngx-translate/core";
 import { IonLabel, IonItem, IonAccordionGroup, IonAccordion } from "@ionic/angular/standalone";
+import { TranslatePipe } from "@ngx-translate/core";
 import { addIcons } from 'ionicons';
 import { caretDownCircle } from 'ionicons/icons';
 

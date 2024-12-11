@@ -1,11 +1,12 @@
-import { Component, computed, inject, OnInit } from '@angular/core';
-import { IonItem, IonList, IonTitle, IonToolbar, IonHeader, IonContent, IonMenu, IonMenuToggle, IonButtons, IonButton, IonIcon, IonCol, IonRow, IonBadge, IonFooter } from '@ionic/angular/standalone';
-import { UserService } from '../../services/user.service';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { IonItem, IonTitle, IonToolbar, IonHeader, IonContent, IonMenu, IonMenuToggle, IonButton, IonIcon, IonBadge, IonFooter } from '@ionic/angular/standalone';
 import { TranslatePipe } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import { addIcons } from 'ionicons';
 import { settings } from 'ionicons/icons';
-import { MessagesService } from '../../services/messages.service';
+
+import { UserService } from '../../services/backend/user.service';
+import { MessagesService } from '../../services/backend/messages.service';
 import { Message } from '../../Interfaces/response.interface';
 
 @Component({
@@ -13,6 +14,7 @@ import { Message } from '../../Interfaces/response.interface';
   templateUrl: './side-menu.component.html',
   styleUrls: ['./side-menu.component.scss'],
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [ IonItem, IonTitle, IonToolbar, IonHeader,  IonContent, IonMenu, IonMenuToggle, TranslatePipe, RouterModule, IonButton, IonIcon, IonBadge, IonFooter ],
 })
 export class SideMenuComponent {
@@ -38,12 +40,10 @@ export class SideMenuComponent {
 
   constructor() {
     addIcons({ settings });
-
   }
 
   logout() {
     this.userService.logout();
-    
   }
 
 }

@@ -8,6 +8,7 @@ export class AnimationService {
 
   private animationCtrl = inject(AnimationController);
 
+  // Animación de entrada (desliza hacia la izquierda)
   enterAnimationLeft = (baseEl: HTMLElement) => {
     const root = baseEl.shadowRoot;
 
@@ -30,7 +31,7 @@ export class AnimationService {
       .addAnimation([backdropAnimation, wrapperAnimation]);
   };
 
-  // Animación de salida (desliza hacia la derecha)
+  // Animación de entrada (desliza hacia la derecha)
   enterAnimationRight = (baseEl: HTMLElement) => {
     const root = baseEl.shadowRoot;
 
@@ -53,6 +54,7 @@ export class AnimationService {
       .addAnimation([backdropAnimation, wrapperAnimation]);
   };
 
+  // Animación de entrada
   enterAnimation = (baseEl: HTMLElement) => {
     const root = baseEl.shadowRoot;
 
@@ -77,6 +79,7 @@ export class AnimationService {
       .addAnimation([backdropAnimation, wrapperAnimation]);
   };
 
+  // Animación en salida
   leaveAnimation = (baseEl: HTMLElement) => {
     return this.enterAnimation(baseEl).direction('reverse');
   };

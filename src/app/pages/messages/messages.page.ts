@@ -1,12 +1,13 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonTitle, IonLabel, IonList, IonItem, IonButton, IonIcon, ModalController, AnimationController, IonCard, IonCardHeader, IonCardTitle, IonCardContent } from '@ionic/angular/standalone';
-import { Message } from 'src/app/shared/Interfaces/response.interface';
+import { IonTitle, IonLabel, IonList, IonItem, IonButton, IonIcon, ModalController} from '@ionic/angular/standalone';
 import { TranslatePipe } from '@ngx-translate/core';
-import { MessagesService } from '../../shared/services/messages.service';
 import { addIcons } from 'ionicons';
 import { trashBin, chatbubbles, mail } from 'ionicons/icons';
+
+import { Message } from 'src/app/shared/Interfaces/response.interface';
+import { MessagesService } from '../../shared/services/backend/messages.service';
 import { MessageComponent } from 'src/app/shared/components/message/message.component';
 import { AnimationService } from '../../shared/services/animation.service';
 
@@ -16,7 +17,7 @@ import { AnimationService } from '../../shared/services/animation.service';
   styleUrls: ['./messages.page.scss'],
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [IonIcon, IonButton, IonItem, IonList, IonLabel,  CommonModule, FormsModule, TranslatePipe, IonTitle, IonCard, IonCardHeader, IonCardTitle, IonCardContent]
+  imports: [IonIcon, IonButton, IonItem, IonList, IonLabel,  CommonModule, FormsModule, TranslatePipe, IonTitle]
 })
 export default class MessagesPage {
 

@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { IonHeader, IonToolbar, IonImg } from "@ionic/angular/standalone";
+import { RouterModule } from '@angular/router';
+
 import { ThemeService } from '../../services/theme.service';
 import { MenuComponent } from "../menu/menu.component";
-import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'shared-component-header',

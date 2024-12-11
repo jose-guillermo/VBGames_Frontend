@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable, signal } from '@angular/core';
-import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
-import { Response, User } from '../Interfaces/response.interface';
 import { Router } from '@angular/router';
-import { DataLocalService } from './data-local.service';
+import { Observable } from 'rxjs';
+
+import { environment } from 'src/environments/environment';
+import { Response, User } from '../../Interfaces/response.interface';
+import { DataLocalService } from '../data-local.service';
 
 const URL = environment.backendUrl;
 

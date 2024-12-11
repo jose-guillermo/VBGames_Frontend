@@ -3,16 +3,16 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { IonButton, IonInput, IonCol, IonRow, IonAvatar, IonImg, IonChip, IonIcon } from '@ionic/angular/standalone';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { emailPattern, passwordMatchValidator, passwordPattern } from 'src/app/shared/validators/register-login.validator';
 import { FilePicker } from '@capawesome/capacitor-file-picker';
+import { Router } from '@angular/router';
 import { addIcons } from 'ionicons';
 import { closeCircle, closeCircleOutline, eye } from 'ionicons/icons';
+
+import { emailPattern, passwordMatchValidator, passwordPattern } from 'src/app/shared/validators/register-login.validator';
 import { TranslatorService } from 'src/app/shared/services/translator.service';
-import { UserService } from 'src/app/shared/services/user.service';
+import { UserService } from 'src/app/shared/services/backend/user.service';
 import { Response } from 'src/app/shared/Interfaces/response.interface';
-import { Router } from '@angular/router';
-import { ToastController } from '@ionic/angular';
-import { MessagesService } from '../../shared/services/messages.service';
+import { MessagesService } from '../../shared/services/backend/messages.service';
 import { ToastService } from '../../shared/services/toast.service';
 
 @Component({
@@ -24,7 +24,6 @@ import { ToastService } from '../../shared/services/toast.service';
   imports: [ IonIcon, IonChip, IonImg, IonAvatar, IonRow, IonCol, IonButton, IonInput, CommonModule, FormsModule, TranslatePipe, ReactiveFormsModule]
 })
 export default class SignupPage {
-
 
   private fb = inject(FormBuilder);
   private translate = inject(TranslateService);

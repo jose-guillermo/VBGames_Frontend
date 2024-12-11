@@ -6,9 +6,10 @@ import { eye, lockClosed, code, logoIonic, logoAngular } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+
 import { emailPattern } from 'src/app/shared/validators/register-login.validator';
 import { TranslatorService } from 'src/app/shared/services/translator.service';
-import { UserService } from 'src/app/shared/services/user.service';
+import { UserService } from 'src/app/shared/services/backend/user.service';
 import { Response } from 'src/app/shared/Interfaces/response.interface';
 import { DataLocalService } from '../../shared/services/data-local.service';
 import { RealtimeDatabaseService } from 'src/app/shared/services/realtime-database.service';
@@ -71,7 +72,7 @@ export default class LoginPage {
           if( response.exito ){
             this.userService.getUser()
               .subscribe((res: Response) => {
-                this.realtimeDb.writeData(`users/${res.user?.userName}`, {coins: res.user?.coins, rol: res.user?.rol,});
+                this.realtimeDb.writeData(`users/${res.user?.userName}`, {name: res.user?.userName,coins: res.user?.coins, rol: res.user?.rol,});
                 this.dataLocal.setValue("user", res.user).then(() => {
                   this.userService.userInit();
                   this.router.navigate(["/home"])

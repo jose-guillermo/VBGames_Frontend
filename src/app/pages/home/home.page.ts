@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { IonInput, IonButton } from "@ionic/angular/standalone";
+import { IonButton } from "@ionic/angular/standalone";
+
 import { RealtimeDatabaseService } from 'src/app/shared/services/realtime-database.service';
 @Component({
   selector: 'app-home',

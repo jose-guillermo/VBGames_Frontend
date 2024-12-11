@@ -1,11 +1,11 @@
 export interface Response{
-    exito: boolean,
-    mensaje?: string,
-    error?: string,
-    user?: User,
-    jwt?: string,
-    mensajes?: Message[],
-    userId?: string,
+  exito: boolean,
+  mensaje?: string,
+  error?: string,
+  user?: User,
+  jwt?: string,
+  mensajes?: Message[],
+  userId?: string,
 }
 
 export interface User {

@@ -1,11 +1,10 @@
-import { Component, computed, effect, inject, OnInit, signal } from '@angular/core';
-import { IonLabel, IonCard, IonAvatar, IonImg, IonItem, IonIcon } from "@ionic/angular/standalone";
+import { ChangeDetectionStrategy, Component, computed, inject, OnInit } from '@angular/core';
+import { IonLabel, IonCard, IonAvatar, IonImg, IonItem } from "@ionic/angular/standalone";
 import { ImagePipe } from '../../pipes/image.pipe';
-import { AchievementService } from '../../services/achievement.service';
-import { UserService } from '../../services/user.service';
+import { AchievementService } from '../../services/backend/achievement.service';
+import { UserService } from '../../services/backend/user.service';
 import { TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { TranslatorService } from '../../services/translator.service';
-import { Achievement } from '../../Interfaces/response.interface';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateModule } from '@ngx-translate/core';
@@ -20,15 +19,8 @@ export function ComponentLoaderFactory(http: HttpClient): TranslateHttpLoader {
   templateUrl: './user-card.component.html',
   styleUrls: ['./user-card.component.scss'],
   standalone: true,
-  imports: [
-    IonItem,
-    IonImg,
-    IonAvatar,
-    IonCard,
-    IonLabel,
-    ImagePipe,
-    TranslateModule
-  ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [ IonItem, IonImg, IonAvatar, IonCard, IonLabel, ImagePipe, TranslateModule ],
   providers: [
     {
       provide: TranslateLoader,

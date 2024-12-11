@@ -1,10 +1,15 @@
 import { CanMatchFn } from '@angular/router';
-import { UserService } from '../services/user.service';
 import { inject } from '@angular/core';
+import { DataLocalService } from '../services/data-local.service';
+import { User } from '../Interfaces/response.interface';
 
-export const rolGuard: CanMatchFn = (route) => {
-  const userService = inject(UserService);
-  const rol = userService.user()?.rol;
+export const rolGuard: CanMatchFn = async (route) => {
+  const dataLocal = inject(DataLocalService);
+  // const login = userService.userInit();
+
+  const user: User = await dataLocal.getValue("user");
+
+  const rol = user.rol;
   if(rol === "admin") {
     return false;
   }

@@ -2,24 +2,23 @@ import { ChangeDetectionStrategy, Component, computed, inject} from '@angular/co
 import { IonMenuButton, IonButtons, IonButton, IonIcon, IonSelect, IonSelectOption, IonBadge } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { moon, sunny, logIn, camera, settings } from 'ionicons/icons';
-import { ThemeService } from '../../services/theme.service';
 import { IonicStorageModule } from '@ionic/storage-angular';
-import { TranslatorService } from '../../services/translator.service';
 import { TranslatePipe } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
-import { UserService } from '../../services/user.service';
+
+import { ThemeService } from '../../services/theme.service';
+import { TranslatorService } from '../../services/translator.service';
+import { UserService } from '../../services/backend/user.service';
 import { Message, User } from '../../Interfaces/response.interface';
-import { MessagesService } from '../../services/messages.service';
-import { filter } from 'rxjs';
+import { MessagesService } from '../../services/backend/messages.service';
 
 @Component({
   selector: 'shared-component-menu',
+  styleUrls: ['./menu.component.scss'],
   templateUrl: './menu.component.html',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-
   imports: [IonBadge,  IonIcon,  IonButton, IonButtons, IonicStorageModule, IonSelect, IonSelectOption, TranslatePipe, RouterModule, IonMenuButton ],
-  styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent {
 
@@ -32,7 +31,7 @@ export class MenuComponent {
   public selectedLang = computed<string>(() => this.translatorService.currentLang() || "es");
   public user = computed<User | null>(() => this.userService.user());
   public userLogin = computed<boolean>(() => this.userService.user() ? true : false);
-  
+
   public isAdmin = computed<boolean>(() => {
     if(this.userService.user()) {
       return this.userService.user()!.rol === "admin" ? true : false;

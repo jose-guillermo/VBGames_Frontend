@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { IonContent } from '@ionic/angular/standalone';
 import { FooterComponent } from "../shared/components/footer/footer.component";
 import { RouterModule } from '@angular/router';
@@ -11,6 +11,7 @@ import { SideMenuComponent } from "../shared/components/side-menu/side-menu.comp
   templateUrl: './layout.page.html',
   styleUrls: ['./layout.page.scss'],
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [ IonContent, FooterComponent, RouterModule, HeaderComponent, DownloadButtonComponent, SideMenuComponent],
 })
 export default class  LagoutPage {

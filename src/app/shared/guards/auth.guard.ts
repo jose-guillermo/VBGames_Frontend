@@ -1,11 +1,10 @@
 import { inject } from '@angular/core';
 import { CanMatchFn } from '@angular/router';
-import { UserService } from '../services/user.service';
+import { UserService } from '../services/backend/user.service';
 import { DataLocalService } from '../services/data-local.service';
 import { User } from '../Interfaces/response.interface';
 
 export const authGuard: CanMatchFn = async (route) => {
-  return true;
   const dataLocal = inject(DataLocalService);
   // const login = userService.userInit();
 

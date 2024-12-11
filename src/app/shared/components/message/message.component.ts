@@ -1,24 +1,23 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, inject, Input, OnInit, Output, signal } from '@angular/core';
-import { Message } from '../../Interfaces/response.interface';
+import { ChangeDetectionStrategy, Component, EventEmitter, inject, Input, OnInit, Output } from '@angular/core';
 import { ModalController, IonTitle, IonHeader, IonToolbar, IonButtons, IonButton, IonContent, IonCard, IonCardHeader, IonCardContent, IonIcon } from '@ionic/angular/standalone';
 import { TranslatePipe } from '@ngx-translate/core';
-import { MessagesService } from '../../services/messages.service';
 import { DatePipe } from '@angular/common';
 import { addIcons } from 'ionicons';
 import { arrowBackOutline, arrowForwardOutline, add } from 'ionicons/icons';
+
+import { Message } from '../../Interfaces/response.interface';
 
 @Component({
   selector: 'app-message',
   templateUrl: './message.component.html',
   styleUrls: ['./message.component.scss'],
-  imports: [IonIcon, IonCardContent, IonCardHeader, IonCard, IonContent, IonButton, IonButtons, IonToolbar, IonHeader, IonTitle, TranslatePipe, DatePipe],
-  changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [IonIcon, IonCardContent, IonCardHeader, IonCard, IonContent, IonButton, IonButtons, IonToolbar, IonHeader, IonTitle, TranslatePipe, DatePipe],
 })
 export class MessageComponent  implements OnInit {
 
   private modalCtrl = inject(ModalController);
-  private messageService = inject(MessagesService);
 
   @Input({required: true}) message: Message | null = null;
   @Input({required: true}) index: number = 0;

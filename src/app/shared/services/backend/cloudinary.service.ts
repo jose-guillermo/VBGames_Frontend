@@ -1,9 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+
 import { environment } from 'src/environments/environment';
-import { Response } from '../Interfaces/response.interface';
-import { DataLocalService } from './data-local.service';
+import { DataLocalService } from '../data-local.service';
 
 
 const APIURL = environment.backendUrl;
@@ -26,10 +25,6 @@ export class CloudinaryService{
    * @param idImg Lo que representa la imagen, si es una imagen de perfil, se llamará perfil
    */
   async uploadImg(file: File, dir: string, id: string, idImg: string) {
-    const jwt = await this.dataLocal.getValue("jwt");
-    const headers = new HttpHeaders({
-      "Jwt": jwt,
-    })
     // Preparo el archivo para enviarlo
     let formData = new FormData();
     formData.append("image", file);
@@ -42,7 +37,7 @@ export class CloudinaryService{
     const url = `${APIURL}cloudinary/upload_img.php?${params.toString()}`
 
     // Envío la petición
-    return this.httpClient.post( url, formData, { headers }).subscribe()
+    return this.httpClient.post( url, formData, { withCredentials: true }).subscribe()
 
   }
 
@@ -55,10 +50,6 @@ export class CloudinaryService{
    * @param lang El idioma que guarda el json, si es español será es.
    */
   async uploadJson(file: File, dir: string, id: string, lang: "es" | "en") {
-    const jwt = await this.dataLocal.getValue("jwt");
-    const headers = new HttpHeaders({
-      "Jwt": jwt,
-    })
     // Preparo el archivo para enviarlo
     let formData = new FormData();
     formData.append("image", file);
@@ -71,9 +62,6 @@ export class CloudinaryService{
     const url = `${APIURL}cloudinary/upload_img.php?${params.toString()}`
 
     // Envío la petición
-    return this.httpClient.post( url, formData, {headers})
-
+    return this.httpClient.post( url, formData, { withCredentials: true })
   }
-
-
 }

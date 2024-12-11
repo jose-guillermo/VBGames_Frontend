@@ -1,14 +1,13 @@
 import { inject, Injectable } from '@angular/core';
-
 import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, set, get, child, onValue, onChildChanged  } from "firebase/database";
+import { getDatabase, ref, set, get, onValue, onChildChanged  } from "firebase/database";
+
 import { environment } from 'src/environments/environment';
 import { ToastService } from './toast.service';
 
 // Inicializar Firebase
 const app = initializeApp(environment.firebaseConfig);
 const database = getDatabase(app);
-const reference = ref(database, "users/jose")
 
 @Injectable({
   providedIn: 'root'
@@ -58,6 +57,12 @@ export class RealtimeDatabaseService {
       const changedData = snapshot.val(); // Obtienes solo los datos que han cambiado
       console.log('Dato que ha cambiado:', changedData);
     });
+  }
+
+
+  userConnected() {
+    const userPresenceRef = ref(database, 'users/' +  + '/presence');
+
   }
 
 }
