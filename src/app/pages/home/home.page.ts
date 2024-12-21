@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { IonButton } from "@ionic/angular/standalone";
 
 import { RealtimeDatabaseService } from 'src/app/shared/services/realtime-database.service';
+import { UserCardComponent } from "../../shared/components/user-card/user-card.component";
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -10,7 +11,7 @@ import { RealtimeDatabaseService } from 'src/app/shared/services/realtime-databa
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
 
-  imports: [IonButton,  RouterModule ],
+  imports: [IonButton, RouterModule, UserCardComponent],
 })
 export default class HomePage {
 

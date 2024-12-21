@@ -19,16 +19,16 @@ export class UserService {
   private router = inject(Router);
   private dataLocal = inject(DataLocalService);
 
-  public user = signal<User | null>( null );
-  // public user = signal<User | null>( {
-  //   id: '12345',
-  //   userName: 'JohnDoe',
-  //   email: 'johndoe@example.com',
-  //   rol: 'user',
-  //   coins: 500,
-  //   creationDate: new Date(), // Fecha actual
-  //   favouriteGame: 'Chess',
-  // });
+  // public user = signal<User | null>( null );
+  public user = signal<User | null>( {
+    id: '12345',
+    userName: 'JohnDoe',
+    email: 'johndoe@example.com',
+    rol: 'user',
+    coins: 500,
+    creationDate: new Date(), // Fecha actual
+    favouriteGame: 'Chess',
+  });
 
   constructor() {
     this.userInit();

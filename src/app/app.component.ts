@@ -18,7 +18,7 @@ export class AppComponent {
   private userService = inject(UserService);
   private themeService = inject(ThemeService);
   private translatorService = inject(TranslatorService);
-  private FileService = inject(FileService);
+  // private FileService = inject(FileService);
   private realtimeDatabase = inject(RealtimeDatabaseService)
 
   constructor() {

@@ -24,7 +24,6 @@ export class ThemeService {
       } else {
         bodyClass.add( "theme-light" )
       }
-
     })
   }
 

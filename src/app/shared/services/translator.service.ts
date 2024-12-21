@@ -54,19 +54,12 @@ export class TranslatorService {
    * Cambia archivos de traducción
    */
   public changeLangFiles ( url: string ) {
-    this.translate.setDefaultLang(this.currentLang());
-    const translateLoader = new TranslateHttpLoader(
-      this.http,
-      url,
-      '.json'
-    );
-    this.translate.setTranslation(this.currentLang(), translateLoader, true);
-    this.translate.use(this.currentLang());
+    effect(() =>  {
+      this.http.get(`./assets/achievement/${this.currentLang()}.json`).subscribe((translations) => {
+        this.translate.setTranslation(this.currentLang(), translations, true);
+      });
+    })
   }
 
-  // private loadTranslations(loader: TranslateHttpLoader): Observable<any> {
-  //   Obtenemos las traducciones usando el loader
-  //   return this.http.get(loader.getTranslationPath(this.currentLang()));
-  // }
 }
 
